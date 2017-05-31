@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+
+    <!-- https://gist.github.com/mortezaadi/8619433 -->
+
+    <!--ler e alterar de acordo
+    http://stackoverflow.com/questions/17331024/persistence-xml-different-transaction-type-attributes
+    RESOURCE_LOCAL vs JTA-->
+    <persistence-unit name="hsqldb" transaction-type="RESOURCE_LOCAL">
+        <!--<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>-->
+        <!--<provider>org.hibernate.ejb.HibernatePersistence</provider>-->
+        <!--<class>research.mpl.backend.todo.ToDoItem</class>-->
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver" />
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:hsqldb:file:target/database/bullet-db;shutdown=true"/>
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="root" />
+
+            <property name="javax.persistence.schema-generation.database.action"
+                      value="update"/>
+            <property name="javax.persistence.schema-generation.create-source"
+                      value="metadata-then-script"/>
+            <property name="javax.persistence.schema-generation.drop-source"
+                      value="metadata-then-script"/>
+
+            <property name="javax.persistence.schema-generation.create-script-source"
+                      value="create-script.sql"/>
+            <property name="javax.persistence.schema-generation.drop-script-source"
+                      value="drop-script.sql"/>
+            <property name="javax.persistence.sql-load-script-source"
+                      value="load-script.sql"/>
+
+            <!--<property name="java.util.logging.Level" value="FINE"/>-->
+            <!--<property name="hibernate.show_sql" value="true"/>-->
+            <!--https://dzone.com/articles/how-batch-insert-and-update-->
+
+            <!--https://dzone.com/articles/jpa-implementation-patterns-->
+
+        </properties>
+  </persistence-unit>
+</persistence>

@@ -1,0 +1,41 @@
+<RestClientRequest>
+  <option name="biscuits">
+    <list />
+  </option>
+  <option name="httpMethod" value="POST" />
+  <option name="urlBase" value="http://localhost:12345" />
+  <option name="urlPath" value="rest/todo/nicole" />
+  <option name="headers">
+    <list>
+      <KeyValuePair>
+        <option name="key" value="Cache-Control" />
+        <option name="value" value="no-cache" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Accept" />
+        <option name="value" value="application/json, text/plain, */*" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Content-Type" />
+        <option name="value" value="application/json" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Origin" />
+        <option name="value" value="http://localhost:12345" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Host" />
+        <option name="value" value="localhost:12345" />
+      </KeyValuePair>
+    </list>
+  </option>
+  <option name="parameters">
+    <list />
+  </option>
+  <option name="parametersEnabled" value="true" />
+  <option name="haveTextToSend" value="true" />
+  <option name="haveFileToSend" value="false" />
+  <option name="isFileUpload" value="false" />
+  <option name="textToSend" value="{&quot;description&quot;:&quot;eeeeeeee&quot;}" />
+  <option name="filesToSend" value="" />
+</RestClientRequest>
