@@ -1,4 +1,4 @@
-package research.mpl.backend.htmlexplorer;
+package research.mpl.backend.gesps;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -6,9 +6,6 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
-
-import javax.swing.*;
-import java.awt.*;
 
 /**
  * Created by Marilia Portela on 20/03/2017.

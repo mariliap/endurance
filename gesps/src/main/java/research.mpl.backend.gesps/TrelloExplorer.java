@@ -1,7 +1,5 @@
-package research.mpl.backend.htmlexplorer;
+package research.mpl.backend.gesps;
 
-import com.gargoylesoftware.htmlunit.WebClient;
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.trello4j.Trello;
 import org.trello4j.TrelloImpl;

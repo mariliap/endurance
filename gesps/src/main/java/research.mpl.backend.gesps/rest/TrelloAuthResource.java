@@ -37,13 +37,11 @@
  * only if the new code is made subject to such option by the copyright
  * holder.
  */
-package research.mpl.backend.htmlexplorer.rest;
+package research.mpl.backend.gesps.rest;
 
 
-import research.mpl.backend.todo.ToDoService;
 
 import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
 import javax.validation.constraints.NotNull;
 import javax.ws.rs.*;
 import java.io.Serializable;
@@ -54,8 +52,8 @@ public class TrelloAuthResource implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @Inject
-    private ToDoService service;
+//    @Inject
+//    private ToDoService service;
 
 
 

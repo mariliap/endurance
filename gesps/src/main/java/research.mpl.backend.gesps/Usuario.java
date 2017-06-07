@@ -1,4 +1,4 @@
-package research.mpl.backend.htmlexplorer;
+package research.mpl.backend.gesps;
 
 import javax.xml.bind.annotation.XmlRootElement;
 

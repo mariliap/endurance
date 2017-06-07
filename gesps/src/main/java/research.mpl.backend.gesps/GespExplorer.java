@@ -1,4 +1,4 @@
-package research.mpl.backend.htmlexplorer;
+package research.mpl.backend.gesps;
 
 import com.gargoylesoftware.htmlunit.*;
 import com.gargoylesoftware.htmlunit.html.*;
@@ -51,7 +51,8 @@ public class GespExplorer {
 
                 System.out.println("Buscando GESPs na situação "
                         + SituacaoGespEnum.SITUACAO_AGUARDANDO_ATENDIMENTO.toString());
-                List<Gesp> gespsEmAtendimento = listarTodosOsChamadosSccPorSituacao(client, page, SituacaoGespEnum.SITUACAO_AGUARDANDO_ATENDIMENTO);
+                List<Gesp> gespsEmAtendimento = listarTodosOsChamadosSccPorSituacao(
+                        client, page, SituacaoGespEnum.SITUACAO_AGUARDANDO_ATENDIMENTO);
 
                 tempoEmMilisegundos = temporizar(tempoEmMilisegundos);
 
@@ -60,7 +61,8 @@ public class GespExplorer {
                 tempoEmMilisegundos = temporizar(tempoEmMilisegundos);
                 System.out.println("Buscando GESPs na situação "
                         + SituacaoGespEnum.SITUACAO_EM_ATENDIMENTO.toString());
-                List<Gesp> gespsAguardandoAtendimento =listarTodosOsChamadosSccPorSituacao(client, page, SituacaoGespEnum.SITUACAO_EM_ATENDIMENTO);
+                List<Gesp> gespsAguardandoAtendimento =listarTodosOsChamadosSccPorSituacao(
+                        client, page, SituacaoGespEnum.SITUACAO_EM_ATENDIMENTO);
 
                 tempoEmMilisegundos = temporizar(tempoEmMilisegundos);
 

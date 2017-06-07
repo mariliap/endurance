@@ -37,15 +37,13 @@
  * only if the new code is made subject to such option by the copyright
  * holder.
  */
-package research.mpl.backend.htmlexplorer.rest;
+package research.mpl.backend.gesps.rest;
 
 
-import research.mpl.backend.htmlexplorer.Usuario;
-import research.mpl.backend.htmlexplorer.service.DefaultTrelloGespSyncService;
+import research.mpl.backend.gesps.service.DefaultTrelloGespSyncService;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
-import javax.validation.constraints.NotNull;
 import javax.ws.rs.*;
 import java.io.Serializable;
 

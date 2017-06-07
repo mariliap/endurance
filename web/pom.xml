@@ -19,6 +19,12 @@
             <version>1.0-SNAPSHOT</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>mpl</groupId>
+            <artifactId>gesps</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <!--<scope>test</scope>-->
+        </dependency>
     </dependencies>
     <build>
         <finalName>web</finalName>

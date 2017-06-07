@@ -47,8 +47,8 @@ import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
 import org.glassfish.jersey.server.ServerProperties;
-import research.mpl.backend.htmlexplorer.rest.GespAuthResource;
-import research.mpl.backend.htmlexplorer.rest.TrelloGespSyncResource;
+import research.mpl.backend.gesps.rest.GespAuthResource;
+import research.mpl.backend.gesps.rest.TrelloGespSyncResource;
 import research.mpl.backend.todo.ToDoResource;
 
 @ApplicationPath("resources")

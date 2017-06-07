@@ -69,8 +69,10 @@ gesptrellosyncApp.controller(
             }
 
             $scope.logInGesp = function() {
-                var trelloGespSyncRest = new GespAuthRest({loginGesp: $scope.tokenGesp.loginGesp,
-                                                            passwordGesp: $scope.tokenGesp.passwordGesp});
+                var trelloGespSyncRest = new GespAuthRest(
+                        {loginGesp: $scope.tokenGesp.loginGesp,
+                        passwordGesp: $scope.tokenGesp.passwordGesp});
+
                 trelloGespSyncRest.$save(
                     function(data) {
                         // Success.

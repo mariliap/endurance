@@ -37,18 +37,68 @@
  * only if the new code is made subject to such option by the copyright
  * holder.
  */
-package research.mpl.backend.htmlexplorer.service;
+package research.mpl.backend.gesps.rest;
 
-import research.mpl.backend.htmlexplorer.Gesp;
-import research.mpl.backend.htmlexplorer.SituacaoGespEnum;
-import research.mpl.backend.htmlexplorer.Usuario;
-import research.mpl.backend.todo.ToDoItem;
 
+import research.mpl.backend.gesps.Gesp;
+import research.mpl.backend.gesps.SituacaoGespEnum;
+import research.mpl.backend.gesps.Usuario;
+import research.mpl.backend.gesps.service.DefaultTrelloGespSyncService;
+
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
+import javax.validation.constraints.NotNull;
+import javax.ws.rs.*;
+import java.io.Serializable;
 import java.util.List;
 
-public interface TrelloGespSyncService {
+@Path("/trelloGespSync")
+@ApplicationScoped
+public class TrelloGespSyncResource implements Serializable {
 
-    Boolean loginGesp(Usuario usuarioGesp);
-    Boolean loginTrello(Usuario usuarioTrello);
-    List<Gesp> sincronizarTodosOsChamadosSccPorSituacao(SituacaoGespEnum situacao);
+    private static final long serialVersionUID = 1L;
+
+    @Inject
+    private DefaultTrelloGespSyncService service;
+
+
+    @GET
+    @Path("{atendente}")
+    @Produces({"application/json"})
+    public List<Gesp> getAll(
+            @PathParam("atendente")
+            String atendente) {
+
+        System.out.println(atendente);
+
+        if(atendente.equalsIgnoreCase("everybody")){
+            return service.sincronizarTodosOsChamadosSccPorSituacao(
+                    SituacaoGespEnum.SITUACAO_AGUARDANDO_ATENDIMENTO);
+        } else {
+            return service.sincronizarTodosOsChamadosSccPorSituacao(
+                    SituacaoGespEnum.SITUACAO_AGUARDANDO_ATENDIMENTO);
+        }
+    }
+
+
+    @POST
+    @Path("autenticar/gesp")
+    @Consumes({"application/json"})
+    public Boolean loginGesp(
+            @NotNull
+            Usuario tokenUser){
+        System.out.println("LOGOU GESP");
+        return service.loginGesp(tokenUser);
+    }
+
+    @POST
+    @Path("autenticar/trello")
+    @Consumes({"application/json"})
+    public Boolean loginTrello(
+            @NotNull
+            Usuario tokenUser){
+        System.out.println("LOGOU TRELLO");
+        return service.loginGesp(tokenUser);
+    }
+
 }

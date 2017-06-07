@@ -13,6 +13,7 @@
         <module>web</module>
         <module>smart</module>
         <module>data</module>
+        <module>gesps</module>
     </modules>
 
     <properties>
@@ -111,22 +112,6 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.5</version>
-        </dependency>
-
-
-
-
-        <!-- Quem ta usando: htmlexplorer-->
-        <dependency>
-            <groupId>net.sourceforge.htmlunit</groupId>
-            <artifactId>htmlunit</artifactId>
-            <version>2.25</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.trello4j</groupId>
-            <artifactId>trello4j</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
 
         <!-- REST & WEBSOCKET -->

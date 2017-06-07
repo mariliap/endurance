@@ -37,18 +37,13 @@
  * only if the new code is made subject to such option by the copyright
  * holder.
  */
-package research.mpl.backend.htmlexplorer.service;
+package research.mpl.backend.gesps.service;
 
-import com.gargoylesoftware.htmlunit.html.HtmlAnchor;
-import research.mpl.backend.htmlexplorer.Gesp;
-import research.mpl.backend.htmlexplorer.GespExplorer;
-import research.mpl.backend.htmlexplorer.SituacaoGespEnum;
-import research.mpl.backend.htmlexplorer.Usuario;
-import research.mpl.backend.todo.ToDoItem;
-import research.mpl.backend.todo.ToDoItemRepository;
+import research.mpl.backend.gesps.Gesp;
+import research.mpl.backend.gesps.SituacaoGespEnum;
+import research.mpl.backend.gesps.Usuario;
 
 import javax.ejb.Stateless;
-import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -59,9 +54,6 @@ public class DefaultTrelloGespSyncService implements TrelloGespSyncService {
 
     private static final Logger logger = Logger
             .getLogger(DefaultTrelloGespSyncService.class.getName());
-
-    @Inject
-    private ToDoItemRepository repository;
 
     String anterior = "ninguem";
     private Usuario usuarioLogado;
